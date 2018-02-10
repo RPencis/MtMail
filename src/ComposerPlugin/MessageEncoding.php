@@ -11,10 +11,12 @@ namespace MtMail\ComposerPlugin;
 
 use MtMail\Event\ComposerEvent;
 use Zend\EventManager\EventManagerInterface;
-use Zend\EventManager\AbstractListenerAggregate;
+use Zend\EventManager\ListenerAggregateTrait;
+use Zend\EventManager\ListenerAggregateInterface;
 
-class MessageEncoding extends AbstractListenerAggregate implements PluginInterface
+class MessageEncoding implements ListenerAggregateInterface
 {
+    use ListenerAggregateTrait;
 
     /**
      * @var string
