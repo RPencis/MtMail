@@ -12,11 +12,14 @@ namespace MtMail\ComposerPlugin;
 use MtMail\Event\ComposerEvent;
 use MtMail\Template\LayoutProviderInterface;
 use Zend\EventManager\EventManagerInterface;
-use Zend\EventManager\AbstractListenerAggregate;
 use Zend\View\Model\ViewModel;
+use Zend\EventManager\ListenerAggregateTrait;
+use Zend\EventManager\ListenerAggregateInterface;
 
-class Layout extends AbstractListenerAggregate implements PluginInterface
+class Layout implements ListenerAggregateInterface
 {
+
+    use ListenerAggregateTrait;
 
     /**
      * @var string
