@@ -14,8 +14,10 @@ use MtMail\Renderer\RendererInterface;
 use MtMail\Service\Composer;
 use MtMail\Service\ComposerPluginManager;
 use Zend\ServiceManager\ServiceLocatorInterface;
+use Zend\ServiceManager\FactoryInterface;
 
-class ComposerServiceFactory
+
+class ComposerServiceFactory implements FactoryInterface
 {
     /**
      * Create service
@@ -25,23 +27,35 @@ class ComposerServiceFactory
      * @param array $options
      * @return Composer
      */
-    public function __invoke(ContainerInterface $serviceLocator)
+    public function __invoke(\Interop\Container\ContainerInterface $container, $requestedName, array $options = null)
     {
-        $configuration = $serviceLocator->get('Configuration');
+        $configuration = $container->get('Configuration');
         /** @var RendererInterface $renderer */
-        $renderer = $serviceLocator->get($configuration['mt_mail']['renderer']);
+        $renderer = $container->get($configuration['mt_mail']['renderer']);
         $service = new Composer($renderer);
 
-        $pluginManager = $serviceLocator->get(ComposerPluginManager::class);
+        $pluginManager = $container->get(ComposerPluginManager::class);
 
         if (isset($configuration['mt_mail']['composer_plugins'])
             && is_array($configuration['mt_mail']['composer_plugins'])
         ) {
+            $eventManager = $service->getEventManager();
             foreach (array_unique($configuration['mt_mail']['composer_plugins']) as $plugin) {
-                $pluginManager->get($plugin)->attach($service->getEventManager());
+                $pluginManager->get($plugin)->attach($eventManager);
             }
         }
 
         return $service;
+    }
+    
+    /**
+     * Create service
+     *
+     * @param ServiceLocatorInterface $serviceLocator
+     * @return mixed
+     */
+    public function createService(ServiceLocatorInterface $serviceLocator)
+    {
+        return $this->__invoke($serviceLocator,null);
     }
 }
