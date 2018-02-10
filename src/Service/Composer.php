@@ -23,6 +23,8 @@ use Zend\View\Model\ModelInterface;
 use Zend\Mime\Message as MimeMessage;
 use Zend\Mime\Part as MimePart;
 use Zend\View\Model\ViewModel;
+use Zend\EventManager\EventManagerAwareTrait;
+use Zend\EventManager\SharedEventManager;
 
 class Composer implements EventManagerAwareInterface
 {
@@ -31,10 +33,7 @@ class Composer implements EventManagerAwareInterface
      */
     protected $renderer;
 
-    /**
-     * @var EventManagerInterface
-     */
-    protected $eventManager;
+    use EventManagerAwareTrait;
 
     /**
      * Class constructor
@@ -44,35 +43,6 @@ class Composer implements EventManagerAwareInterface
     public function __construct(RendererInterface $renderer)
     {
         $this->renderer = $renderer;
-    }
-
-    /**
-     * Inject an EventManager instance
-     *
-     * @param  EventManagerInterface $eventManager
-     * @return self
-     */
-    public function setEventManager(EventManagerInterface $eventManager)
-    {
-        $this->eventManager = $eventManager;
-
-        return $this;
-    }
-
-    /**
-     * Retrieve the event manager
-     *
-     * Lazy-loads an EventManager instance if none registered.
-     *
-     * @return EventManagerInterface
-     */
-    public function getEventManager()
-    {
-        if (null === $this->eventManager) {
-            $this->eventManager = new EventManager();
-        }
-
-        return $this->eventManager;
     }
 
     /**
@@ -192,5 +162,22 @@ class Composer implements EventManagerAwareInterface
         $em->triggerEvent($event);
 
         return $event->getMessage();
+    }
+
+    /**
+     * Retrieve the event manager
+     *
+     * Lazy-loads an EventManager instance if none registered.
+     *
+     * @return EventManagerInterface
+     */
+    public function getEventManager()
+    {
+        if (! $this->events instanceof EventManagerInterface) {
+            //shared events are needed so that it doesn't get overided by default EventManager
+            $sharedEvents = new SharedEventManager();
+            $this->setEventManager(new EventManager($sharedEvents));
+        }
+        return $this->events;
     }
 }
