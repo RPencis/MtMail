@@ -10,12 +10,15 @@
 namespace MtMail\ComposerPlugin;
 
 use MtMail\Event\ComposerEvent;
-use Zend\EventManager\AbstractListenerAggregate;
 use Zend\EventManager\EventManagerInterface;
 use Zend\Mime\Part as MimePart;
+use Zend\EventManager\ListenerAggregateTrait;
+use Zend\EventManager\ListenerAggregateInterface;
 
-class PlaintextMessage extends AbstractListenerAggregate implements PluginInterface
+class PlaintextMessage implements ListenerAggregateInterface
 {
+
+    use ListenerAggregateTrait;
 
     /**
      * (c) http://php.net/nl2br#86678
