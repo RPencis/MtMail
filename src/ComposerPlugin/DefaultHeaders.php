@@ -12,12 +12,15 @@ namespace MtMail\ComposerPlugin;
 use MtMail\Event\ComposerEvent;
 use MtMail\Template\HeadersProviderInterface;
 use Zend\EventManager\EventManagerInterface;
-use Zend\EventManager\AbstractListenerAggregate;
 use Zend\Mail\Header\HeaderInterface;
 use Zend\Mail\Message;
+use Zend\EventManager\ListenerAggregateTrait;
+use Zend\EventManager\ListenerAggregateInterface;
 
-class DefaultHeaders extends AbstractListenerAggregate implements PluginInterface
+class DefaultHeaders implements ListenerAggregateInterface
 {
+
+    use ListenerAggregateTrait;
 
     /**
      * @var array
