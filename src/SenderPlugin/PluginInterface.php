@@ -9,7 +9,7 @@
 
 namespace MtMail\SenderPlugin;
 
-use Zend\EventManager\ListenerAggregateInterface;
+use Laminas\EventManager\ListenerAggregateInterface;
 
 interface PluginInterface extends ListenerAggregateInterface
 {

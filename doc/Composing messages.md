@@ -19,7 +19,7 @@ $variables = [
     'userName' => 'John Doe',
 ];
 $message = $mailService->compose($headers, 'application/mail/welcome.phtml', $variables);
-/** @var \Zend\Mail\Message $message */
+/** @var \Laminas\Mail\Message $message */
 ```
 
 `MtMail` also provides handy controller plugin that proxies to Mail service:
@@ -33,7 +33,7 @@ Theory of operation
 
 Composing e-mail message is a process with following steps:
 
-1. Create `Zend\Mail\Message` object
+1. Create `Laminas\Mail\Message` object
 2. Inject headers into message
 3. Render HTML body
 4. Render text body

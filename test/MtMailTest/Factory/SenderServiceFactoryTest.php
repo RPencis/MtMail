@@ -14,7 +14,7 @@ use MtMail\Factory\SenderServiceFactory;
 use MtMail\SenderPlugin\PluginInterface;
 use MtMail\Service\Sender;
 use MtMail\Service\SenderPluginManager;
-use Zend\Mail\Transport\TransportInterface;
+use Laminas\Mail\Transport\TransportInterface;
 
 class SenderServiceFactoryTest extends \PHPUnit\Framework\TestCase
 {

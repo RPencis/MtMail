@@ -8,7 +8,7 @@ return [
          * Transport settings
          */
 
-        'transport' => 'Zend\Mail\Transport\Smtp',
+        'transport' => 'Laminas\Mail\Transport\Smtp',
         'transport_options' => [
             'host' => 'some-host.com',
             'connection_class' => 'login',

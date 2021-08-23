@@ -11,10 +11,10 @@ namespace MtMail\ComposerPlugin;
 
 use MtMail\Event\ComposerEvent;
 use MtMail\Template\LayoutProviderInterface;
-use Zend\EventManager\EventManagerInterface;
-use Zend\View\Model\ViewModel;
-use Zend\EventManager\ListenerAggregateTrait;
-use Zend\EventManager\ListenerAggregateInterface;
+use Laminas\EventManager\EventManagerInterface;
+use Laminas\View\Model\ViewModel;
+use Laminas\EventManager\ListenerAggregateTrait;
+use Laminas\EventManager\ListenerAggregateInterface;
 
 class Layout implements ListenerAggregateInterface
 {

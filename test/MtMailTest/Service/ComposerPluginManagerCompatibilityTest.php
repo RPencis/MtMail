@@ -13,9 +13,9 @@ use MtMail\ComposerPlugin\PluginInterface;
 use MtMail\Exception\RuntimeException;
 use MtMail\Service\ComposerPluginManager;
 use PHPUnit\Framework\TestCase;
-use Zend\ServiceManager\Config;
-use Zend\ServiceManager\ServiceManager;
-use Zend\ServiceManager\Test\CommonPluginManagerTrait;
+use Laminas\ServiceManager\Config;
+use Laminas\ServiceManager\ServiceManager;
+use Laminas\ServiceManager\Test\CommonPluginManagerTrait;
 
 class ComposerPluginManagerCompatibilityTest extends TestCase
 {

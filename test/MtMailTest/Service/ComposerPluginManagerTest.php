@@ -14,7 +14,7 @@ use MtMail\Exception\RuntimeException;
 use MtMail\Service\ComposerPluginManager;
 use PHPUnit\Framework\TestCase;
 use stdClass;
-use Zend\ServiceManager\ServiceManager;
+use Laminas\ServiceManager\ServiceManager;
 
 class ComposerPluginManagerTest extends TestCase
 {

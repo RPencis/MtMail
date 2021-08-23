@@ -11,8 +11,8 @@ namespace MtMail\Service;
 
 use MtMail\Exception\RuntimeException;
 use MtMail\Template\TemplateInterface;
-use Zend\ServiceManager\AbstractPluginManager;
-use Zend\ServiceManager\Exception;
+use Laminas\ServiceManager\AbstractPluginManager;
+use Laminas\ServiceManager\Exception;
 
 class TemplateManager extends AbstractPluginManager
 {

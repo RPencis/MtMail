@@ -11,11 +11,11 @@ namespace MtMail\Service;
 
 use MtMail\Exception\RuntimeException;
 use MtMail\SenderPlugin\PluginInterface;
-use Zend\ServiceManager\AbstractPluginManager;
-use Zend\ServiceManager\Exception;
-use Zend\ServiceManager\ServiceLocatorAwareInterface;
-use Zend\ServiceManager\ServiceLocatorInterface;
-use Zend\ServiceManager\ServiceManager;
+use Laminas\ServiceManager\AbstractPluginManager;
+use Laminas\ServiceManager\Exception;
+use Laminas\ServiceManager\ServiceLocatorAwareInterface;
+use Laminas\ServiceManager\ServiceLocatorInterface;
+use Laminas\ServiceManager\ServiceManager;
 
 class SenderPluginManager extends AbstractPluginManager
 {

@@ -12,7 +12,7 @@ namespace MtMailTest\Template;
 use MtMail\Exception\RuntimeException;
 use MtMail\Service\TemplateManager;
 use MtMail\Template\TemplateInterface;
-use Zend\ServiceManager\ServiceManager;
+use Laminas\ServiceManager\ServiceManager;
 
 class ManagerTest extends \PHPUnit\Framework\TestCase
 {

@@ -11,9 +11,9 @@ namespace MtMail\Service;
 
 use MtMail\ComposerPlugin\PluginInterface;
 use MtMail\Exception\RuntimeException;
-use Zend\ServiceManager\AbstractPluginManager;
-use Zend\ServiceManager\Exception;
-use Zend\ServiceManager\Exception\InvalidServiceException;
+use Laminas\ServiceManager\AbstractPluginManager;
+use Laminas\ServiceManager\Exception;
+use Laminas\ServiceManager\Exception\InvalidServiceException;
 
 class ComposerPluginManager extends AbstractPluginManager
 {

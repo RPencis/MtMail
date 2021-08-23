@@ -11,7 +11,7 @@ namespace MtMail\Factory;
 
 use Interop\Container\ContainerInterface;
 use MtMail\Service\ComposerPluginManager;
-use Zend\ServiceManager\Config;
+use Laminas\ServiceManager\Config;
 
 class ComposerPluginManagerFactory
 {

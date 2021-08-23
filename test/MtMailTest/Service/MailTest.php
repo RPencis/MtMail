@@ -16,8 +16,8 @@ use MtMail\Service\TemplateManager;
 use MtMail\Template\SimpleHtml;
 use MtMail\Template\TemplateInterface;
 use Prophecy\Argument;
-use Zend\Mail\Message;
-use Zend\View\Model\ModelInterface;
+use Laminas\Mail\Message;
+use Laminas\View\Model\ModelInterface;
 
 class MailTest extends \PHPUnit\Framework\TestCase
 {

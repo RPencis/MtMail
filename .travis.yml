@@ -11,7 +11,7 @@ cache:
 env:
   global:
     - COMPOSER_ARGS="--no-interaction"
-    - LEGACY_DEPS="phpunit/phpunit zendframework/zend-stdlib zendframework/zend-eventmanager  zendframework/zend-servicemanager"
+    - LEGACY_DEPS="phpunit/phpunit laminas/laminas-stdlib laminas/laminas-eventmanager  laminas/laminas-servicemanager"
 
 matrix:
   fast_finish: true

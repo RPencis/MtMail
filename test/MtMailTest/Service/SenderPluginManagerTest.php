@@ -14,7 +14,7 @@ use MtMail\SenderPlugin\PluginInterface;
 use MtMail\Service\SenderPluginManager;
 use PHPUnit\Framework\TestCase;
 use stdClass;
-use Zend\ServiceManager\ServiceManager;
+use Laminas\ServiceManager\ServiceManager;
 
 class SenderPluginManagerTest extends TestCase
 {

@@ -11,7 +11,7 @@ namespace MtMailTest\Test;
 
 use MtMail\Template\HeadersProviderInterface;
 use MtMail\Template\HtmlTemplateInterface;
-use Zend\Mail\Header\Subject;
+use Laminas\Mail\Header\Subject;
 
 class HeaderObjectProviderTemplate implements HtmlTemplateInterface, HeadersProviderInterface
 {

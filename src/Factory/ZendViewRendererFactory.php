@@ -12,12 +12,12 @@ namespace MtMail\Factory;
 use Interop\Container\ContainerInterface;
 use MtMail\Renderer\ZendView;
 
-class ZendViewRendererFactory
+class LaminasViewRendererFactory
 {
     public function __invoke(ContainerInterface $serviceLocator)
     {
         $view = $serviceLocator->get('ViewManager')->getView();
-        $service = new ZendView($view);
+        $service = new LaminasView($view);
 
         return $service;
     }

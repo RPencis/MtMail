@@ -9,13 +9,13 @@
 
 namespace MtMail\Renderer;
 
-use Zend\View\Model\ModelInterface;
-use Zend\View\View;
+use Laminas\View\Model\ModelInterface;
+use Laminas\View\View;
 
 /**
- * Re-use Zend\View in order to render template with children
+ * Re-use Laminas\View in order to render template with children
  */
-class ZendView extends View implements RendererInterface
+class LaminasView extends View implements RendererInterface
 {
     /**
      * @var View

@@ -8,7 +8,7 @@ using application configuration:
 ```php
 return [
     'mt_mail' => [
-        'transport' => \Zend\Mail\Transport\Smtp::class,
+        'transport' => \Laminas\Mail\Transport\Smtp::class,
         'transport_options' => [
             'host' => 'some-host.com',
             'connection_class' => 'login',
@@ -22,7 +22,7 @@ return [
 ];
 ```
 
-`transport` can be any service that is accessible from `ServiceManager` and implements `Zend\Mail\Transport\TransportInterface`.
+`transport` can be any service that is accessible from `ServiceManager` and implements `Laminas\Mail\Transport\TransportInterface`.
 You can use this if you want to benefit from non-standard transports (for instance those from [SlmMail](https://github.com/juriansluiman/SlmMail) module).
 
 Here's another example - configuring file transport:
@@ -30,7 +30,7 @@ Here's another example - configuring file transport:
 ```php
 return [
     'mt_mail' => [
-        'transport' => \Zend\Mail\Transport\File::class,
+        'transport' => \Laminas\Mail\Transport\File::class,
         'transport_options' => [
             'path' => 'data/mail'
         ],
@@ -49,7 +49,7 @@ $sender = $this->getServiceLocator()->get(\MtMail\Service\Mail::class);
 $sender->send($message);
 ```
 
-where `$message` is an instance of `Zend\Mail\Message`.
+where `$message` is an instance of `Laminas\Mail\Message`.
 
 `MtMail` also provides handy controller plugin that proxies to Mail service:
 

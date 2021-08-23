@@ -12,9 +12,9 @@ namespace MtMailTest\Service;
 use MtMail\Event\SenderEvent;
 use MtMail\Service\Sender;
 use Prophecy\Argument;
-use Zend\EventManager\EventManager;
-use Zend\Mail\Message;
-use Zend\Mail\Transport\TransportInterface;
+use Laminas\EventManager\EventManager;
+use Laminas\Mail\Message;
+use Laminas\Mail\Transport\TransportInterface;
 
 class SenderTest extends \PHPUnit\Framework\TestCase
 {
