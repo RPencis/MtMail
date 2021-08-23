@@ -13,8 +13,8 @@ use Interop\Container\ContainerInterface;
 use MtMail\Renderer\RendererInterface;
 use MtMail\Service\Composer;
 use MtMail\Service\ComposerPluginManager;
-use Zend\ServiceManager\ServiceLocatorInterface;
-use Zend\ServiceManager\FactoryInterface;
+use Laminas\ServiceManager\ServiceLocatorInterface;
+use Laminas\ServiceManager\FactoryInterface;
 
 
 class ComposerServiceFactory implements FactoryInterface

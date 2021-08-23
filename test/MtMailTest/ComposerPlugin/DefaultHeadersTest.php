@@ -14,9 +14,9 @@ use MtMail\ComposerPlugin\DefaultHeaders;
 use MtMailTest\Test\HeaderObjectProviderTemplate;
 use MtMailTest\Test\HeadersProviderTemplate;
 use PHPUnit\Framework\TestCase;
-use Zend\Mail\Headers;
-use Zend\Mail\Header\Subject;
-use Zend\Mail\Message;
+use Laminas\Mail\Headers;
+use Laminas\Mail\Header\Subject;
+use Laminas\Mail\Message;
 
 class DefaultHeadersTest extends TestCase
 {

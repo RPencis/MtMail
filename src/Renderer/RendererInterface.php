@@ -9,7 +9,7 @@
 
 namespace MtMail\Renderer;
 
-use Zend\View\Model\ModelInterface;
+use Laminas\View\Model\ModelInterface;
 
 interface RendererInterface
 {

@@ -15,9 +15,9 @@ use MtMail\Service\Composer;
 use MtMailTest\Test\HtmlTemplate;
 use MtMailTest\Test\TextTemplate;
 use Prophecy\Argument;
-use Zend\EventManager\EventManager;
-use Zend\View\Model\ModelInterface;
-use Zend\View\Model\ViewModel;
+use Laminas\EventManager\EventManager;
+use Laminas\View\Model\ModelInterface;
+use Laminas\View\Model\ViewModel;
 
 class ComposerTest extends \PHPUnit\Framework\TestCase
 {
@@ -160,7 +160,7 @@ class ComposerTest extends \PHPUnit\Framework\TestCase
         $viewModel = new ViewModel();
         $template = new TextTemplate();
         $renderer = $this->prophesize(RendererInterface::class);
-        $renderer->render(Argument::type('Zend\View\Model\ViewModel'))->willReturn('BODY');
+        $renderer->render(Argument::type('Laminas\View\Model\ViewModel'))->willReturn('BODY');
         $service = new Composer($renderer->reveal());
 
         $message = $service->compose([], $template, $viewModel);

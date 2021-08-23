@@ -10,8 +10,8 @@
 namespace MtMail\Factory;
 
 use Interop\Container\ContainerInterface;
-use Zend\Mail\Transport\Smtp;
-use Zend\Mail\Transport\SmtpOptions;
+use Laminas\Mail\Transport\Smtp;
+use Laminas\Mail\Transport\SmtpOptions;
 
 class SmtpTransportFactory
 {

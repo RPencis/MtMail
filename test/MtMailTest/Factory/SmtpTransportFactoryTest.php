@@ -11,7 +11,7 @@ namespace MtMailTest\Factory;
 
 use Interop\Container\ContainerInterface;
 use MtMail\Factory\SmtpTransportFactory;
-use Zend\Mail\Transport\Smtp;
+use Laminas\Mail\Transport\Smtp;
 
 class SmtpTransportFactoryTest extends \PHPUnit\Framework\TestCase
 {

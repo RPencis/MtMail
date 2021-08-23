@@ -16,11 +16,11 @@ use MtMail\Factory\DefaultHeadersPluginFactory;
 use MtMail\Factory\LayoutPluginFactory;
 use MtMail\Factory\MessageEncodingPluginFactory;
 use MtMail\Renderer\ZendView;
-use Zend\ServiceManager\Factory\InvokableFactory;
+use Laminas\ServiceManager\Factory\InvokableFactory;
 
 return [
     'mt_mail' => [
-        'renderer' => ZendView::class,
+        'renderer' => LaminasView::class,
         'composer_plugin_manager' => [
             'aliases' => [
                 'PlaintextMessage' => PlaintextMessage::class,
@@ -46,11 +46,11 @@ return [
             'DefaultHeaders'
         ],
         'default_headers' => [],
-        'transport' => Zend\Mail\Transport\Sendmail::class,
+        'transport' => Laminas\Mail\Transport\Sendmail::class,
     ],
     'service_manager' => [
         'invokables' => [
-            Zend\Mail\Transport\Sendmail::class => Zend\Mail\Transport\Sendmail::class,
+            Laminas\Mail\Transport\Sendmail::class => Laminas\Mail\Transport\Sendmail::class,
         ],
         'factories' => [
             MtMail\Renderer\ZendView::class             => MtMail\Factory\ZendViewRendererFactory::class,
@@ -60,8 +60,8 @@ return [
             MtMail\Service\ComposerPluginManager::class => MtMail\Factory\ComposerPluginManagerFactory::class,
             MtMail\Service\SenderPluginManager::class   => MtMail\Factory\SenderPluginManagerFactory::class,
             MtMail\Service\TemplateManager::class       => MtMail\Factory\TemplateManagerFactory::class,
-            Zend\Mail\Transport\Smtp::class             => MtMail\Factory\SmtpTransportFactory::class,
-            Zend\Mail\Transport\File::class             => MtMail\Factory\FileTransportFactory::class,
+            Laminas\Mail\Transport\Smtp::class             => MtMail\Factory\SmtpTransportFactory::class,
+            Laminas\Mail\Transport\File::class             => MtMail\Factory\FileTransportFactory::class,
         ],
     ],
     'controller_plugins' => [

@@ -12,7 +12,7 @@ namespace MtMailTest\Factory;
 use MtMail\ComposerPlugin\Layout;
 use MtMail\Factory\LayoutPluginFactory;
 use MtMail\Service\ComposerPluginManager;
-use Zend\ServiceManager\ServiceManager;
+use Laminas\ServiceManager\ServiceManager;
 
 class LayoutPluginFactoryTest extends \PHPUnit\Framework\TestCase
 {

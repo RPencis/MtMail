@@ -11,19 +11,19 @@ namespace MtMailTest\Renderer;
 
 use MtMail\Renderer\ZendView;
 use PHPUnit\Framework\TestCase;
-use Zend\View\Model\ViewModel;
+use Laminas\View\Model\ViewModel;
 
-class ZendViewTest extends TestCase
+class LaminasViewTest extends TestCase
 {
-    public function testRenderSetsViewModelAndCallsZendViewRender()
+    public function testRenderSetsViewModelAndCallsLaminasViewRender()
     {
         $viewModel = $this->prophesize(ViewModel::class);
         $viewModel->setOption('has_parent', true)->shouldBeCalled();
 
-        $view = $this->prophesize(\Zend\View\View::class);
+        $view = $this->prophesize(\Laminas\View\View::class);
         $view->render($viewModel->reveal());
 
-        $renderer = new ZendView($view->reveal());
+        $renderer = new LaminasView($view->reveal());
         $renderer->render($viewModel->reveal());
     }
 }

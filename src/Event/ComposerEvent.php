@@ -10,10 +10,10 @@
 namespace MtMail\Event;
 
 use MtMail\Template\TemplateInterface;
-use Zend\EventManager\Event;
-use Zend\Mail\Message;
-use Zend\View\Model\ModelInterface;
-use Zend\Mime\Message as MimeMessage;
+use Laminas\EventManager\Event;
+use Laminas\Mail\Message;
+use Laminas\View\Model\ModelInterface;
+use Laminas\Mime\Message as MimeMessage;
 
 class ComposerEvent extends Event
 {
@@ -93,7 +93,7 @@ class ComposerEvent extends Event
     }
 
     /**
-     * @param  \Zend\Mime\Message $body
+     * @param  \Laminas\Mime\Message $body
      * @return self
      */
     public function setBody($body)
@@ -104,7 +104,7 @@ class ComposerEvent extends Event
     }
 
     /**
-     * @return \Zend\Mime\Message
+     * @return \Laminas\Mime\Message
      */
     public function getBody()
     {

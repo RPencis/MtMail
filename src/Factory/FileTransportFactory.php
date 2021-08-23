@@ -10,8 +10,8 @@
 namespace MtMail\Factory;
 
 use Interop\Container\ContainerInterface;
-use Zend\Mail\Transport\File;
-use Zend\Mail\Transport\FileOptions;
+use Laminas\Mail\Transport\File;
+use Laminas\Mail\Transport\FileOptions;
 
 class FileTransportFactory
 {

@@ -15,7 +15,7 @@ from templates, and sending them through transport adapters.
 ### Features:
 * factory for creating e-mail messages
 * factory for e-mail transport adapters, service for one-line dispatch
-* rendering templates from `phtml` files, using `Zend\View` and `PhpRenderer`
+* rendering templates from `phtml` files, using `Laminas\View` and `PhpRenderer`
 * rendering templates with layouts
 * plugins for various common tasks: from setting default headers to generating plaintext version of HTML message
 * plugin support via dedicated plugin managers
@@ -34,7 +34,7 @@ Creating e-mails
 
 ### Configuration
 
-By default MtMail doesn't require any extra configuration. It will use `Zend\View` to render
+By default MtMail doesn't require any extra configuration. It will use `Laminas\View` to render
 templates accessible by your application.
 
 ### Usage
@@ -87,7 +87,7 @@ Update your application config:
 ```php
 return [
     'mt_mail' => [
-        'transport' => \Zend\Mail\Transport\Smtp::class,
+        'transport' => \Laminas\Mail\Transport\Smtp::class,
         'transport_options' => [
             'host' => 'some-host.com',
             'connection_class' => 'login',

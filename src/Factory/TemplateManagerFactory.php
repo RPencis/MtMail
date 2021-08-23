@@ -11,7 +11,7 @@ namespace MtMail\Factory;
 
 use Interop\Container\ContainerInterface;
 use MtMail\Service\TemplateManager;
-use Zend\ServiceManager\Config;
+use Laminas\ServiceManager\Config;
 
 class TemplateManagerFactory
 {

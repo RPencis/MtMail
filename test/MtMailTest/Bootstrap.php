@@ -9,9 +9,9 @@
 
 namespace MtMailTest;
 
-use Zend\Mvc\Application;
-use Zend\ServiceManager\ServiceManager;
-use Zend\Mvc\Service\ServiceManagerConfig;
+use Laminas\Mvc\Application;
+use Laminas\ServiceManager\ServiceManager;
+use Laminas\Mvc\Service\ServiceManagerConfig;
 
 /**
  * Test bootstrap, for setting up autoloading

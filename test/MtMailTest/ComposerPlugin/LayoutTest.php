@@ -13,7 +13,7 @@ use MtMail\Event\ComposerEvent;
 use MtMail\ComposerPlugin\Layout;
 use MtMail\Service\Composer;
 use MtMailTest\Test\LayoutProviderTemplate;
-use Zend\View\Model\ViewModel;
+use Laminas\View\Model\ViewModel;
 
 class LayoutTest extends \PHPUnit\Framework\TestCase
 {

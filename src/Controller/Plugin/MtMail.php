@@ -10,7 +10,7 @@
 namespace MtMail\Controller\Plugin;
 
 use MtMail\Service\Mail;
-use Zend\Mvc\Controller\Plugin\AbstractPlugin;
+use Laminas\Mvc\Controller\Plugin\AbstractPlugin;
 
 class MtMail extends AbstractPlugin
 {

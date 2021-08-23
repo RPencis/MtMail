@@ -12,7 +12,7 @@ namespace MtMailTest\Plugin;
 use MtMail\Event\ComposerEvent;
 use MtMail\ComposerPlugin\MessageEncoding;
 use PHPUnit\Framework\TestCase;
-use Zend\Mail\Message;
+use Laminas\Mail\Message;
 
 class MessageEncodingTest extends TestCase
 {

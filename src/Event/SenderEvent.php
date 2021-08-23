@@ -9,8 +9,8 @@
 
 namespace MtMail\Event;
 
-use Zend\EventManager\Event;
-use Zend\Mail\Message;
+use Laminas\EventManager\Event;
+use Laminas\Mail\Message;
 
 class SenderEvent extends Event
 {
@@ -27,7 +27,7 @@ class SenderEvent extends Event
     protected $message;
 
     /**
-     * @param  \Zend\Mail\Message $message
+     * @param  \Laminas\Mail\Message $message
      * @return self
      */
     public function setMessage(Message $message)
@@ -38,7 +38,7 @@ class SenderEvent extends Event
     }
 
     /**
-     * @return \Zend\Mail\Message
+     * @return \Laminas\Mail\Message
      */
     public function getMessage()
     {

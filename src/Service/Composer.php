@@ -15,16 +15,16 @@ use MtMail\Renderer\RendererInterface;
 use MtMail\Template\HtmlTemplateInterface;
 use MtMail\Template\TemplateInterface;
 use MtMail\Template\TextTemplateInterface;
-use Zend\EventManager\EventManager;
-use Zend\EventManager\EventManagerAwareInterface;
-use Zend\EventManager\EventManagerInterface;
-use Zend\Mail\Message;
-use Zend\View\Model\ModelInterface;
-use Zend\Mime\Message as MimeMessage;
-use Zend\Mime\Part as MimePart;
-use Zend\View\Model\ViewModel;
-use Zend\EventManager\EventManagerAwareTrait;
-use Zend\EventManager\SharedEventManager;
+use Laminas\EventManager\EventManager;
+use Laminas\EventManager\EventManagerAwareInterface;
+use Laminas\EventManager\EventManagerInterface;
+use Laminas\Mail\Message;
+use Laminas\View\Model\ModelInterface;
+use Laminas\Mime\Message as MimeMessage;
+use Laminas\Mime\Part as MimePart;
+use Laminas\View\Model\ViewModel;
+use Laminas\EventManager\EventManagerAwareTrait;
+use Laminas\EventManager\SharedEventManager;
 
 class Composer implements EventManagerAwareInterface
 {

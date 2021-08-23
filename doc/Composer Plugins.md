@@ -7,7 +7,7 @@ body and headers.
 
 Following events are triggered during message composition:
 
- * `compose.pre` - when "fresh" `Zend\Mail\Message` is created, allows to configure it
+ * `compose.pre` - when "fresh" `Laminas\Mail\Message` is created, allows to configure it
  * `headers.pre` - before headers are injected into message, allows injecting custom headers
  * `headers.post`- after headers are injected into message
  * `html_body.pre` - before HTML version of message is generated, allows to update `ViewModel`

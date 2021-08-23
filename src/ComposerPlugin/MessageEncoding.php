@@ -10,9 +10,9 @@
 namespace MtMail\ComposerPlugin;
 
 use MtMail\Event\ComposerEvent;
-use Zend\EventManager\EventManagerInterface;
-use Zend\EventManager\ListenerAggregateTrait;
-use Zend\EventManager\ListenerAggregateInterface;
+use Laminas\EventManager\EventManagerInterface;
+use Laminas\EventManager\ListenerAggregateTrait;
+use Laminas\EventManager\ListenerAggregateInterface;
 
 class MessageEncoding implements ListenerAggregateInterface
 {

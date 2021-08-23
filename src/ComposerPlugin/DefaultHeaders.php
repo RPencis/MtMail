@@ -11,11 +11,11 @@ namespace MtMail\ComposerPlugin;
 
 use MtMail\Event\ComposerEvent;
 use MtMail\Template\HeadersProviderInterface;
-use Zend\EventManager\EventManagerInterface;
-use Zend\Mail\Header\HeaderInterface;
-use Zend\Mail\Message;
-use Zend\EventManager\ListenerAggregateTrait;
-use Zend\EventManager\ListenerAggregateInterface;
+use Laminas\EventManager\EventManagerInterface;
+use Laminas\Mail\Header\HeaderInterface;
+use Laminas\Mail\Message;
+use Laminas\EventManager\ListenerAggregateTrait;
+use Laminas\EventManager\ListenerAggregateInterface;
 
 class DefaultHeaders implements ListenerAggregateInterface
 {
